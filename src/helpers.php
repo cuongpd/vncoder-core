@@ -152,22 +152,6 @@ if (!function_exists('only_number')) {
     }
 }
 
-if (!function_exists('parseMultipleArgs')) {
-    function parseMultipleArgs($expression)
-    {
-        return collect(explode(',', $expression))->map(function ($item) {
-            return trim($item);
-        });
-    }
-}
-
-if (!function_exists('stripQuotes')) {
-    function stripQuotes($expression)
-    {
-        return str_replace(["'", '"'], '', $expression);
-    }
-}
-
 if (! function_exists('vn_cookie')) {
     function vn_cookie($key, $default = '')
     {
