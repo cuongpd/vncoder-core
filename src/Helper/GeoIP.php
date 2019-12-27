@@ -27,7 +27,6 @@ class GeoIP
 
         $info = $dbReader->get($ip);
         if ($info) {
-            $data['code'] = $info['country']['iso_code'] ?? '';
             $data['local'] = $info['continent']['names']['en'] ?? '';
             $data['country'] = $info['country']['names']['en'] ?? '';
         }
